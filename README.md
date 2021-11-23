@@ -1,5 +1,5 @@
 # vimode
-vimode is an [add-on](https://addons.mozilla.org/en-US/firefox/) that enables [vi-like operations](#vi-like-operations) in [firefox](https://www.mozilla.org/en-US/firefox/browsers/).
+vimode is an [Add-on](https://addons.mozilla.org/en-US/firefox/) that enables [vi-like operations](#vi-like-operations) in [firefox](https://www.mozilla.org/en-US/firefox/browsers/).
 
 ## vi-like operations
 * The table is based on [Keyboard shortcuts](https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly).
