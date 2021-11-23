@@ -21,7 +21,7 @@
   "content_scripts": [
     {
       "exclude_matches": ["https://github.com/*", "https://gitlab.com/*"
-                         ,"https://scrapbox.io/*"],
+                         ,"https://scrapbox.io/*", "https://vscode.dev/*"],
       "matches": ["<all_urls>"],
       "js": ["content-script.js"]
     }
