@@ -1,5 +1,5 @@
 # vimode
-vimode is an [Add-on](https://addons.mozilla.org/en-US/firefox/) that enables [vi-like operations](#vi-like-operations) on [Firefox](https://www.mozilla.org/en-US/firefox/browsers/).
+[vimode](https://ghsable.github.io/vimode/) is an [Add-on](https://addons.mozilla.org/en-US/firefox/) that let us to use [vi-like operations](#vi-like-operations) on [Firefox](https://www.mozilla.org/en-US/firefox/browsers/).
 
 ## vi-like operations
 * The table is based on [Keyboard shortcuts](https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly).
@@ -31,5 +31,5 @@ vimode is an [Add-on](https://addons.mozilla.org/en-US/firefox/) that enables [v
 | Go to Last Tab                                   | `Shift` + `L`         | `-`         |
 | Open selection in New Tab                        | `O`                   | `-`         |
 | Undo Close Tab                                   | `U`                   | `sessions`  |
-| Open the selection at DeepL (`New Tab`,`En->Ja`) | `Z`                   | `-`         |
-| Open the selection at DeepL (`New Tab`,`Ja->En`) | `Shift` + `Z`         | `-`         |
+| Open selection on DeepL (`New Tab`,`En->Ja`)     | `Z`                   | `-`         |
+| Open selection on DeepL (`New Tab`,`Ja->En`)     | `Shift` + `Z`         | `-`         |
