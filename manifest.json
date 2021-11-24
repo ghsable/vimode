@@ -4,7 +4,7 @@
   "name": "vimode",
   "version": "1.0.2",
 
-  "description": "vimode is an Add-on that enables vi-like operations on firefox.",
+  "description": "vimode is an Add-on that enables vi-like operations on Firefox.",
 
   "icons": {
     "48": "icons/icon-48.png"
