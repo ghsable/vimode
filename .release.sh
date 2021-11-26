@@ -1,9 +1,10 @@
 #!/bin/bash
 
+set -eu
+
 # Create Add-on
 readonly OUTPUT_FILE=~/vimode.zip
 [ ! -f ${OUTPUT_FILE} ] || rm -v ${OUTPUT_FILE}
-
 cd $(dirname ${0})
 7za a -tzip ${OUTPUT_FILE} README.md LICENSE manifest.json icons content-script.js background-script.js
 
