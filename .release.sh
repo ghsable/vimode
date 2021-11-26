@@ -9,4 +9,4 @@ cd $(dirname ${0})
 
 # Run mozilla/addons-linter - https://github.com/mozilla/addons-linter
 readonly ADDONS_LINTER=~/javascript/node_modules/addons-linter/bin/addons-linter
-[ ! -f ${ADDONS_LINTER} ] || ${ADDONS_LINTER} ${OUTPUT_FILE}
+if [ -f ${OUTPUT_FILE} ] && [ -f ${ADDONS_LINTER} ]; then ${ADDONS_LINTER} ${OUTPUT_FILE}; fi
