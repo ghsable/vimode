@@ -17,7 +17,8 @@ document.addEventListener('change', function (event) {
 window.addEventListener('keyup', function (event) {
   const ctrlKeyPressed = event.ctrlKey;
   const altKeyPressed = event.altKey;
-  if (event.defaultPrevented || ctrlKeyPressed || altKeyPressed
+  if (event.defaultPrevented || !event.isTrusted
+    || ctrlKeyPressed || altKeyPressed
     || (input_mode && event.code !== 'Escape')) {
     // Do nothing if the event was already processed
     return;
