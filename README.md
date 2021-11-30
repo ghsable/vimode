@@ -33,3 +33,6 @@
 | Undo Close Tab                                   | `U`                   | `sessions`  |
 | Open selection on DeepL (`New Tab`,`En->Ja`)     | `Z`                   | `-`         |
 | Open selection on DeepL (`New Tab`,`Ja->En`)     | `Shift` + `Z`         | `-`         |
+
+## ...!!XD
+* [vimode](https://ghsable.github.io/vimode/) + [mousemode](https://crates.io/crates/mousemode) = `...!!XD`
