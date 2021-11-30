@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "vimode",
-  "version": "1.0.3",
+  "version": "1.0.4",
 
   "description": "vimode is an Add-on that let us to use vi-like operations on Firefox.",
 
