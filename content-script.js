@@ -26,7 +26,6 @@ window.addEventListener('keyup', function (event) {
 
   if (!(event.code === 'ShiftLeft' || event.code === 'ShiftRight')
     && sessionStorage.getItem('intervalID') !== null) {
-    // Fix two keyup event 'shiftkey + x' run
     // Interrupt the scrollDownAuto()
     clearInterval(sessionStorage.getItem('intervalID'));
   }
