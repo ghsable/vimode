@@ -54,6 +54,8 @@ window.addEventListener('keyup', function (event) {
       case 'KeyZ':
         browser.runtime.sendMessage(JSON.parse('{"code":"shiftKey_KeyZ","selection":"' + window.getSelection().toString() + '"}'));
         break;
+      default:
+        return;
     }
   }
 
