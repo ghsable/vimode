@@ -28,6 +28,7 @@ window.addEventListener('keyup', function (event) {
     && sessionStorage.getItem('intervalID') !== null) {
     // Interrupt the scrollDownAuto()
     clearInterval(sessionStorage.getItem('intervalID'));
+    sessionStorage.removeItem('intervalID');
   }
 
   const shiftKeyPressed = event.shiftKey;
