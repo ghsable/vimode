@@ -1,4 +1,6 @@
 # vimode
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fghsable%2Fvimode.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fghsable%2Fvimode?ref=badge_shield)
+
 [vimode](https://ghsable.github.io/vimode/) is an [Add-on](https://addons.mozilla.org/en-US/firefox/) that let us to use [vi-like operations](#vi-like-operations) on [Firefox](https://www.mozilla.org/en-US/firefox/browsers/).
 
 ## vi-like operations
@@ -36,3 +38,7 @@
 
 ## ...!!XD
 * [vimode](https://ghsable.github.io/vimode/) + [mousemode](https://crates.io/crates/mousemode) = `...!!XD`
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fghsable%2Fvimode.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fghsable%2Fvimode?ref=badge_large)
