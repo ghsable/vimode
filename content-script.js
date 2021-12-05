@@ -134,7 +134,7 @@ function scrollDown() {
 function scrollDownAuto() {
   const intervalID = setInterval(() => window.scrollBy({top: 100, left: 0, behavior: 'smooth'}), 2000);
   if (Number.isSafeInteger(intervalID)) {
-    sessionStorage.setItem('intervalID', intervalID);
+    sessionStorage.setItem('intervalID', String(intervalID));
   }
 }
 
