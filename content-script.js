@@ -27,7 +27,7 @@ window.addEventListener('keyup', function (event) {
   if (sessionStorage.getItem('intervalID') !== null &&
      !(event.code === 'ShiftLeft' || event.code === 'ShiftRight')) {
       // Interrupt the scrollDownAuto()
-      clearInterval(sessionStorage.getItem('intervalID'));
+      clearInterval(Number(sessionStorage.getItem('intervalID')));
       sessionStorage.removeItem('intervalID');
   }
 
@@ -161,7 +161,7 @@ function historyForward() {
 
 function copyTitleURL() {
   const TitleURL = document.title + ' - '  + location.href;
-  if (TitleURL !== null || TitleURL !== undefined) {
+  if (!(TitleURL === null || TitleURL === undefined)) {
     navigator.clipboard.writeText(TitleURL);
     alert('C L I P P E D ! !\n' + TitleURL);
   }
