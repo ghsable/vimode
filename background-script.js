@@ -47,7 +47,8 @@ function tabUpdateFirst() {
   browser.tabs.query({
     currentWindow: true
   }).then((tabs) => {
-    browser.tabs.update(tabs.map((i) => i.id)[0], {active: true});
+    const Tabs = tabs.map((i) => i.id);
+    browser.tabs.update(Tabs[0], {active: true});
   });
 }
 
@@ -103,7 +104,7 @@ function tabReload() {
 }
 
 function tabCreate(query) {
-  if (query === '') {
+  if (query === '' || query === null || query === undefined) {
     browser.tabs.create({
       active: true,
       url: 'https://www.ecosia.org/'
@@ -117,7 +118,7 @@ function tabCreate(query) {
 }
 
 function tabCreateDeepL_EnJa(query) {
-  if (query === '') {
+  if (query === '' || query === null || query === undefined) {
     browser.tabs.create({
       active: true,
       url: 'https://www.deepl.com/translator'
@@ -131,7 +132,7 @@ function tabCreateDeepL_EnJa(query) {
 }
 
 function tabCreateDeepL_JaEn(query) {
-  if (query === '') {
+  if (query === '' || query === null || query === undefined) {
     browser.tabs.create({
       active: true,
       url: 'https://www.deepl.com/translator'

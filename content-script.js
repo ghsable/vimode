@@ -17,18 +17,18 @@ document.addEventListener('change', function (event) {
 window.addEventListener('keyup', function (event) {
   const ctrlKeyPressed = event.ctrlKey;
   const altKeyPressed = event.altKey;
-  if (event.defaultPrevented || !event.isTrusted
-    || ctrlKeyPressed || altKeyPressed
-    || (input_mode && event.code !== 'Escape')) {
-    // Do nothing if the event was already processed
-    return;
+  if (ctrlKeyPressed || altKeyPressed ||
+     (input_mode && event.code !== 'Escape') ||
+     event.defaultPrevented || !event.isTrusted) {
+      // Do nothing if the event was already processed
+      return;
   }
 
-  if (!(event.code === 'ShiftLeft' || event.code === 'ShiftRight')
-    && sessionStorage.getItem('intervalID') !== null) {
-    // Interrupt the scrollDownAuto()
-    clearInterval(sessionStorage.getItem('intervalID'));
-    sessionStorage.removeItem('intervalID');
+  if (sessionStorage.getItem('intervalID') !== null &&
+     !(event.code === 'ShiftLeft' || event.code === 'ShiftRight')) {
+      // Interrupt the scrollDownAuto()
+      clearInterval(sessionStorage.getItem('intervalID'));
+      sessionStorage.removeItem('intervalID');
   }
 
   const shiftKeyPressed = event.shiftKey;
@@ -161,13 +161,15 @@ function historyForward() {
 
 function copyTitleURL() {
   const TitleURL = document.title + ' - '  + location.href;
-  navigator.clipboard.writeText(TitleURL);
-  alert('C L I P P E D ! !\n' + TitleURL);
+  if (TitleURL !== null || TitleURL !== undefined) {
+    navigator.clipboard.writeText(TitleURL);
+    alert('C L I P P E D ! !\n' + TitleURL);
+  }
 }
 
 function vimodeElementFocus() {
   let vimodeElement = document.getElementById('vimode-a-64354306');
-  if (vimodeElement === null) {
+  if (vimodeElement === null || vimodeElement === undefined) {
     document.body.insertAdjacentHTML('afterend', '<a href="javascript:void(0)" id="vimode-a-64354306"></a>');
     vimodeElement = document.getElementById('vimode-a-64354306');
   }
