@@ -25,6 +25,7 @@ window.addEventListener('keyup', function (event) {
   }
 
   if (sessionStorage.getItem('intervalID') !== null &&
+     Number.isSafeInteger(Number(sessionStorage.getItem('intervalID'))) &&
      !(event.code === 'ShiftLeft' || event.code === 'ShiftRight')) {
       // Interrupt the scrollDownAuto()
       clearInterval(Number(sessionStorage.getItem('intervalID')));

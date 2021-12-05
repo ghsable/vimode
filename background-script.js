@@ -57,6 +57,7 @@ function tabUpdateLast() {
     currentWindow: true
   }).then((tabs) => {
     const Tabs = tabs.map((i) => i.id);
+    if (!Number.isSafeInteger(Tabs.length)) { return; }
     browser.tabs.update(Tabs[Tabs.length - 1], {active: true});
   });
 }
@@ -71,6 +72,7 @@ function tabUpdateNext() {
       active: true
     }).then((currentTab) => {
       const currentTabIndex = Tabs.findIndex((element) => element == currentTab.map((i) => i.id)[0]);
+      if (!Number.isSafeInteger(currentTabIndex)) { return; }
       if (currentTabIndex === Tabs.length - 1) {
         browser.tabs.update(Tabs[0], {active: true});
         return;
@@ -90,6 +92,7 @@ function tabUpdatePrevious() {
       active: true
     }).then((currentTab) => {
       const currentTabIndex = Tabs.findIndex((element) => element == currentTab.map((i) => i.id)[0]);
+      if (!Number.isSafeInteger(currentTabIndex)) { return; }
       if (currentTabIndex === 0) {
         browser.tabs.update(Tabs[Tabs.length - 1], {active: true});
         return;
