@@ -23,8 +23,9 @@ document.addEventListener('change', function (event) {
 window.addEventListener('keyup', function (event) {
   const ctrlKeyPressed = event.ctrlKey;
   const altKeyPressed = event.altKey;
+  const contenteditable_mode = (document.querySelector('div[contenteditable]') !== null);
   if (ctrlKeyPressed || altKeyPressed ||
-     (input_mode && event.code !== 'Escape') ||
+     (input_mode && event.code !== 'Escape') || contenteditable_mode ||
      event.defaultPrevented || !event.isTrusted) {
       // Do nothing if the event was already processed
       return;
