@@ -170,7 +170,7 @@ function historyForward() {
 }
 
 function copyTitleURL() {
-  const TitleURL = document.title + ' - '  + location.href;
+  const TitleURL = document.title + ' - '  + document.location.href;
   if (!(TitleURL === null || TitleURL === undefined)) {
     navigator.clipboard.writeText(TitleURL);
     alert('C L I P P E D ! !\n' + TitleURL);
