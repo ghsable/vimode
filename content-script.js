@@ -10,17 +10,17 @@
 
 let input_mode = false;
 
-document.addEventListener('input', function (event) {
+document.addEventListener('input', event => {
   input_mode = true;
 }, true);
 
-document.addEventListener('change', function (event) {
+document.addEventListener('change', event => {
   input_mode = false;
 }, true);
 
 // --------------------
 
-window.addEventListener('keyup', function (event) {
+window.addEventListener('keyup', event => {
   const ctrlKeyPressed = event.ctrlKey;
   const altKeyPressed = event.altKey;
   const contenteditable_mode = (document.querySelector('div[contenteditable]') !== null);
