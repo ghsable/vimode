@@ -6,7 +6,7 @@
    - You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-window.addEventListener('keyup', event => {
+window.addEventListener('keydown', event => {
   const ctrlKeyPressed = event.ctrlKey;
   const altKeyPressed = event.altKey;
   const input_mode = (document.activeElement.tagName === 'INPUT'    ||
@@ -20,8 +20,7 @@ window.addEventListener('keyup', event => {
   }
 
   if (sessionStorage.getItem('intervalID') !== null &&
-     Number.isSafeInteger(Number(sessionStorage.getItem('intervalID'))) &&
-     !(event.code === 'ShiftLeft' || event.code === 'ShiftRight')) {
+     Number.isSafeInteger(Number(sessionStorage.getItem('intervalID')))) {
       // Interrupt the scrollDownAuto()
       clearInterval(Number(sessionStorage.getItem('intervalID')));
       sessionStorage.removeItem('intervalID');
