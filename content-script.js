@@ -1,31 +1,19 @@
+/* --- content-script.js --- */
+
 /*
  This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this file,
    - You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-// content-script.js
-
-// --------------------
-
-let input_mode = false;
-
-document.addEventListener('input', event => {
-  input_mode = true;
-}, true);
-
-document.addEventListener('change', event => {
-  input_mode = false;
-}, true);
-
-// --------------------
-
 window.addEventListener('keyup', event => {
   const ctrlKeyPressed = event.ctrlKey;
   const altKeyPressed = event.altKey;
-  const contenteditable_mode = (document.querySelector('div[contenteditable]') !== null);
+  const input_mode = (document.activeElement.tagName === 'INPUT'    ||
+                      document.activeElement.tagName === 'TEXTAREA' ||
+                      document.activeElement.tagName === 'DIV');
   if (ctrlKeyPressed || altKeyPressed ||
-     (input_mode && event.code !== 'Escape') || contenteditable_mode ||
+     (input_mode && event.code !== 'Escape') ||
      event.defaultPrevented || !event.isTrusted) {
       // Do nothing if the event was already processed
       return;
@@ -43,7 +31,7 @@ window.addEventListener('keyup', event => {
 
   if (shiftKeyPressed) {
     switch (event.code) {
-      // --- content-script.js
+      // --- content-script.js --- //
       case 'KeyG':
         scrollBottom();
         break;
@@ -53,7 +41,7 @@ window.addEventListener('keyup', event => {
       case 'Backspace':
         historyForward();
         break;
-      // --- background-script.js
+      // --- background-script.js --- //
       case 'KeyH':
         browser.runtime.sendMessage(JSON.parse('{"code":"shiftKey_KeyH"}'));
         break;
@@ -70,7 +58,7 @@ window.addEventListener('keyup', event => {
 
   if (!shiftKeyPressed) {
     switch (event.code) {
-      // --- content-script.js
+      // --- content-script.js --- //
       case 'KeyG':
         scrollTop();
         break;
@@ -86,7 +74,7 @@ window.addEventListener('keyup', event => {
       case 'Backspace':
         historyBack();
         break;
-      // --- background-script.js
+      // --- background-script.js --- //
       case 'KeyD':
         browser.runtime.sendMessage(JSON.parse('{"code":"KeyD"}'));
         break;
@@ -119,8 +107,6 @@ window.addEventListener('keyup', event => {
   // Cancel the default action to avoid it being handled twice
   event.preventDefault();
 }, true);
-
-// --------------------
 
 function scrollUp() {
   window.scrollBy({
@@ -185,5 +171,3 @@ function vimodeElementFocus() {
   }
   vimodeElement.focus({preventScroll: true});
 }
-
-// --------------------

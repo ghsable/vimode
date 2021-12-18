@@ -1,12 +1,10 @@
+/* --- background-script.js --- */
+
 /*
  This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this file,
    - You can obtain one at http://mozilla.org/MPL/2.0/.
 */
-
-// background-script.js
-
-// --------------------
 
 browser.runtime.onMessage.addListener(background_event);
 
@@ -46,8 +44,6 @@ function background_event(json) {
       return;
   }
 }
-
-// --------------------
 
 function tabUpdateFirst() {
   browser.tabs.query({
@@ -166,5 +162,3 @@ function tabRemove() {
 function tabRestore() {
   browser.sessions.restore(browser.sessions.getRecentlyClosed()[0]);
 }
-
-// --------------------
