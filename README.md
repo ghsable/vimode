@@ -35,7 +35,7 @@
 | Open selection on DeepL (`New Tab`,`Ja->En`)     | `Shift` + `Z`         | `-`         |
 
 ## ...!!XD
-* [vimode](https://ghsable.github.io/vimode/) + [mousemode](https://crates.io/crates/mousemode) = `...!!XD`
+* ([vimode](https://ghsable.github.io/vimode/) + [searchmode](https://ghsable.github.io/searchmode/)) + [mousemode](https://crates.io/crates/mousemode) = `...!!XD`
 
 ## License
 * [Mozilla Public License Version 2.0](https://www.mozilla.org/en-US/MPL/2.0/)

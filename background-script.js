@@ -112,7 +112,7 @@ function tabCreate(query) {
   if (query === '' || query === null || query === undefined) {
     browser.tabs.create({
       active: true,
-      url: 'https://www.ecosia.org/'
+      url: 'https://ghsable.github.io/searchmode/'
     });
   } else {
     browser.tabs.create({
