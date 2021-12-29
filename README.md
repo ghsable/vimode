@@ -1,6 +1,8 @@
 # vimode
 [vimode](https://ghsable.github.io/vimode/) is an [Add-on](https://addons.mozilla.org/en-US/firefox/) that let us to use [vi-like operations](#vi-like-operations) on [Firefox](https://www.mozilla.org/en-US/firefox/browsers/).
 
+[![demo_vimode.gif](https://raw.githubusercontent.com/ghsable/vimode/main/.readme/images/demo_vimode.gif)](https://raw.githubusercontent.com/ghsable/vimode/main/.readme/images/demo_vimode.mp4)
+
 ## vi-like operations
 * The table is based on [Keyboard shortcuts](https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly).
 ### Navigation
