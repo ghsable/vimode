@@ -17,7 +17,7 @@ function background_event(json) {
       tabUpdateLast();
       break;
     case 'shiftKey_KeyZ':
-      tabCreateDeepL_JaEn(json.selection);
+      tabCreateGoogleTranslate(json.selection);
       break;
     case 'KeyD':
       tabRemove();
@@ -38,7 +38,7 @@ function background_event(json) {
       tabRestore();
       break;
     case 'KeyZ':
-      tabCreateDeepL_EnJa(json.selection);
+      tabCreateDeepL(json.selection);
       break;
     default:
       return;
@@ -122,7 +122,7 @@ function tabCreate(query) {
   }
 }
 
-function tabCreateDeepL_EnJa(query) {
+function tabCreateDeepL(query) {
   if (query === '' || query === null || query === undefined) {
     browser.tabs.create({
       active: true,
@@ -136,16 +136,16 @@ function tabCreateDeepL_EnJa(query) {
   }
 }
 
-function tabCreateDeepL_JaEn(query) {
+function tabCreateGoogleTranslate(query) {
   if (query === '' || query === null || query === undefined) {
     browser.tabs.create({
       active: true,
-      url: 'https://www.deepl.com/translator'
+      url: 'https://translate.google.com'
     });
   } else {
     browser.tabs.create({
       active: true,
-      url: 'https://www.deepl.com/translator#ja/en/' + query
+      url: 'https://translate.google.com/?source=osdd#auto|auto|' + query
     });
   }
 }
