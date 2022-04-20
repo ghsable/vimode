@@ -36,8 +36,5 @@
 | Open [DeepL](https://www.deepl.com/translator) in New Tab | `Z` | `-` |
 | Open [Google Translate](https://translate.google.com) in New Tab | `Shift` + `Z` | `-` |
 
-## ...!!XD
-* ([vimode](https://ghsable.github.io/vimode/) + [searchmode](https://github.com/ghsable/searchmode)) + [mousemode](https://crates.io/crates/mousemode) = `...!!XD`
-
 ## License
 * [Mozilla Public License Version 2.0](https://www.mozilla.org/en-US/MPL/2.0/)
